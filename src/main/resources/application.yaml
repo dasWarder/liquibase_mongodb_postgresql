@@ -1,0 +1,18 @@
+spring:
+
+    liquibase:
+      enabled: true
+      change-log: classpath:db/changelog/postgre/pg.changelog-master.xml
+    data:
+      mongodb:
+        host: localhost
+        port: 27017
+        database: test
+    datasource:
+      username: user
+      password: password
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://localhost:5432/person
+    jpa:
+      hibernate:
+        ddl-auto: none
