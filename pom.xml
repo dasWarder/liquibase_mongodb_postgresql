@@ -15,6 +15,9 @@
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>
+        <liquibase.maven.plugin.version>4.3.0</liquibase.maven.plugin.version>
+        <jakarta.xml.bind.version>2.3.2</jakarta.xml.bind.version>
+        <spring.boot.maven.plugin.version>2.4.3</spring.boot.maven.plugin.version>
     </properties>
     <dependencies>
         <dependency>
@@ -51,19 +54,19 @@
         <dependency>
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-maven-plugin</artifactId>
-            <version>4.3.0</version>
+            <version>${liquibase.maven.plugin.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.liquibase.ext</groupId>
             <artifactId>liquibase-mongodb</artifactId>
-            <version>4.3.0</version>
+            <version>${liquibase.maven.plugin.version}</version>
         </dependency>
 
         <dependency>
             <groupId>jakarta.xml.bind</groupId>
             <artifactId>jakarta.xml.bind-api</artifactId>
-            <version>2.3.2</version>
+            <version>${jakarta.xml.bind.version}</version>
         </dependency>
 
     </dependencies>
@@ -74,17 +77,16 @@
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>2.4.3</version>
+                    <version>${spring.boot.maven.plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.1</version>
+                    <version>${maven-compiler-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.liquibase</groupId>
                     <artifactId>liquibase-maven-plugin</artifactId>
-                    <version>3.8.1</version>
                     <configuration>
                         <propertyFile>src/main/resources/db/changelog/postgre/liquibase.properties</propertyFile>
                         <changeLogFile>src/main/resources/db/changelog/postgre/pg.changelog-master.xml</changeLogFile>
@@ -97,7 +99,7 @@
                         <dependency>
                             <groupId>jakarta.xml.bind</groupId>
                             <artifactId>jakarta.xml.bind-api</artifactId>
-                            <version>2.3.2</version>
+                            <version>${jakarta.xml.bind.version}</version>
                         </dependency>
                     </dependencies>
                 </plugin>
