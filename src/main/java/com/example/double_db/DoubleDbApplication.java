@@ -13,8 +13,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @SpringBootApplication
-@EnableMongoRepositories(basePackageClasses = { IssueRepository.class })
-@EnableJpaRepositories(basePackageClasses = { PersonRepository.class })
 public class DoubleDbApplication {
 
     public static void main(String[] args) {

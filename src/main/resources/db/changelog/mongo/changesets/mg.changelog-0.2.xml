@@ -5,9 +5,7 @@
         xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
               http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
-    <preConditions>
-        <dbms type="mongodb"/>
-    </preConditions>
+
     <changeSet id="mg_2" author="andrey">
         <ext:insertMany collectionName="issue">
             <ext:documents>

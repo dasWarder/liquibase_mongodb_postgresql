@@ -1,18 +1,16 @@
 package com.example.double_db.entity;
 
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "person")
 @NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "person")
 @ToString(exclude = "id")
 public class Person {
 
